@@ -1,0 +1,100 @@
+// VARIABLES
+$dark-bg: #121212;
+$dark-surface: #1a1a1a;
+$dark-light: #292929;
+$dark-primary: #bb86fc;
+$dark-primary-variant: #3700b3;
+$dark-secondary: #03dac6;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $dark-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "roboto light";
+}
+
+.calculator {
+  background-color: $dark-surface;
+  height: 380px;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .display {
+    background-color: $dark-surface;
+    position: relative;
+    color: white;
+    font-size: 36px;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+    height: 60px;
+
+    small {
+      position: absolute;
+      font-size: 10px;
+      top: 5px;
+      right: 5px;
+      color: $dark-primary;
+    }
+  }
+
+  .nums-container {
+    width: 75%;
+  }
+
+  .ops-container {
+    width: 25%;
+  }
+}
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  font-size: 24px;
+  color: white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Individual button styles
+.dark-light {
+  background-color: $dark-light;
+}
+.dark-secondary {
+  background-color: $dark-secondary;
+}
+.dark-primary {
+  background-color: $dark-primary;
+}
+.big-h {
+  border-radius: 50px;
+  width: 110px;
+}
+.big-v {
+  height: 25%;
+}
+.ac {
+  margin-right: 50%;
+}
